@@ -1,0 +1,192 @@
+.comparison-view {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  padding: 32px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.comparison-header {
+  text-align: center;
+}
+
+.comparison-header h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.5px;
+}
+
+.comparison-header p {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
+
+.comp-search-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.comp-search-box {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background-color: var(--bg-card);
+  border: 1px solid var(--border-color);
+  padding: 12px 20px;
+  border-radius: 100px;
+  width: 100%;
+  max-width: 300px;
+  transition: border-color 0.2s;
+}
+
+.comp-search-box:focus-within {
+  border-color: var(--accent);
+}
+
+.comp-search-box svg {
+  color: var(--text-secondary);
+}
+
+.comp-search-box input {
+  background: transparent;
+  border: none;
+  outline: none;
+  color: var(--text-primary);
+  font-size: 1rem;
+  width: 100%;
+}
+
+.comp-search-box input::placeholder {
+  color: var(--text-secondary);
+}
+
+.comparison-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.vs-badge {
+  background: var(--bg-sidebar);
+  border: 1px solid var(--border-color);
+  color: var(--accent-light);
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+  font-size: 1.1rem;
+  box-shadow: var(--shadow-md);
+  z-index: 10;
+}
+
+.comp-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 24px;
+  padding: 2.5rem;
+  width: 100%;
+  max-width: 450px;
+  box-shadow: var(--shadow-sm);
+  transition: box-shadow 0.2s;
+}
+
+.comp-card:hover {
+  box-shadow: var(--shadow-md);
+}
+
+.comp-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.comp-card-header h3 {
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin: 0 0 4px 0;
+}
+
+.country-code {
+  color: var(--text-secondary);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+
+.comp-temp-container {
+  margin-bottom: 2.5rem;
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 2rem;
+}
+
+.comp-temp {
+  font-family: 'Fira Code', monospace;
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1;
+  color: var(--text-primary);
+  letter-spacing: -2px;
+  margin-bottom: 0.5rem;
+}
+
+.comp-desc {
+  color: var(--text-secondary);
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  font-weight: 500;
+}
+
+.comp-metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.c-metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.25rem;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px solid transparent;
+  transition: background 0.2s;
+}
+
+.c-metric:hover {
+  background: rgba(255, 255, 255, 0.06);
+}
+
+.c-label {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.c-val {
+  font-weight: 700;
+  color: var(--text-primary);
+}
+
+@media (max-width: 768px) {
+  .comparison-cards {
+    flex-direction: column;
+  }
+}
